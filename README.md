@@ -28,19 +28,27 @@ git clone git@github.com:taozle/EasyProxy.git
 cd EasyProxy
 ```
 
-2. 配置签名：
+2. 用 Xcode 打开 `EasyProxy.xcodeproj`。
 
-```bash
-cp Local.xcconfig.example Local.xcconfig
-```
+3. 配置签名 — 选择以下任一方式：
 
-编辑 `Local.xcconfig`，填入你的 Apple Development Team ID：
+   **方式 A（推荐）：Xcode 界面操作**
 
-```
-DEVELOPMENT_TEAM = YOUR_TEAM_ID
-```
+   选中 target `EasyProxy` → Signing & Capabilities → Team 下拉选择你的开发者账号。
 
-3. 用 Xcode 打开 `EasyProxy.xcodeproj`，选择目标设备，运行。
+   **方式 B：xcconfig 文件**
+
+   ```bash
+   cp Local.xcconfig.example Local.xcconfig
+   ```
+
+   编辑 `Local.xcconfig`，填入你的 Team ID：
+
+   ```
+   DEVELOPMENT_TEAM = YOUR_TEAM_ID
+   ```
+
+4. 选择目标设备，运行。
 
 ## 验证
 
